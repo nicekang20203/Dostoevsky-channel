@@ -1,0 +1,439 @@
+/* ================================================
+   DETAIL PAGES — SHARED STYLES
+   For life events, works, and other detail pages
+   ================================================ */
+
+/* Hero Section */
+.detail-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--space-2xl) + 80px) var(--space-xl) var(--space-2xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.detail-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(ellipse at 30% 20%, rgba(107, 45, 60, 0.25) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(107, 45, 60, 0.15) 0%, transparent 50%),
+        linear-gradient(to bottom, var(--color-bg-dark) 0%, var(--color-bg-main) 100%);
+    z-index: -1;
+}
+
+.detail-hero-content {
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Breadcrumb */
+.detail-breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+}
+
+.detail-breadcrumb a {
+    color: var(--color-text-muted);
+}
+
+.detail-breadcrumb a:hover {
+    color: var(--color-gold);
+}
+
+.detail-breadcrumb span {
+    color: var(--color-text-muted);
+}
+
+.detail-breadcrumb .current {
+    color: var(--color-gold);
+}
+
+/* Date Badge */
+.detail-date {
+    display: inline-block;
+    padding: var(--space-md) var(--space-lg);
+    background: rgba(107, 45, 60, 0.3);
+    border: 1px solid rgba(201, 169, 98, 0.3);
+    margin-bottom: var(--space-lg);
+}
+
+.detail-date .day {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--color-gold);
+    line-height: 1;
+}
+
+.detail-date .month-year {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
+    color: var(--color-cream);
+}
+
+/* Year Badge (for works) */
+.detail-year {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-md);
+    background: rgba(201, 169, 98, 0.1);
+    border: 1px solid rgba(201, 169, 98, 0.3);
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
+    color: var(--color-gold);
+    margin-bottom: var(--space-lg);
+}
+
+/* Titles */
+.detail-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-md);
+}
+
+.detail-title-russian {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-text-muted);
+    margin-top: var(--space-sm);
+}
+
+.detail-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--color-text-secondary);
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Content Area */
+.detail-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-2xl) var(--space-xl);
+}
+
+.detail-section {
+    margin-bottom: var(--space-2xl);
+}
+
+.detail-section-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    color: var(--color-gold);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: var(--border-subtle);
+}
+
+.detail-section p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-lg);
+}
+
+.detail-section p:last-child {
+    margin-bottom: 0;
+}
+
+.detail-section p strong {
+    color: var(--color-cream);
+}
+
+.detail-section p em {
+    color: var(--color-cream-dark);
+}
+
+/* Blockquotes */
+.detail-quote {
+    padding: var(--space-xl);
+    background: var(--color-bg-card);
+    border-left: 3px solid var(--color-gold);
+    margin: var(--space-xl) 0;
+}
+
+.detail-quote.burgundy {
+    border-left-color: var(--color-burgundy);
+}
+
+.detail-quote blockquote {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--color-cream);
+    line-height: 1.7;
+    margin: 0 0 var(--space-md) 0;
+}
+
+.detail-quote cite {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--color-gold);
+    font-style: normal;
+}
+
+/* Highlight Box */
+.highlight-box {
+    background: linear-gradient(135deg, var(--color-bg-card) 0%, rgba(107, 45, 60, 0.3) 100%);
+    border: var(--border-subtle);
+    padding: var(--space-xl);
+    margin: var(--space-xl) 0;
+    text-align: center;
+}
+
+.highlight-box .big-number {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--color-gold);
+    line-height: 1;
+}
+
+.highlight-box .label {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
+    color: var(--color-text-secondary);
+    margin-top: var(--space-sm);
+}
+
+/* Characters Grid */
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.character-card {
+    background: var(--color-bg-card);
+    border: var(--border-subtle);
+    padding: var(--space-lg);
+    transition: all var(--transition-base);
+}
+
+.character-card:hover {
+    border-color: rgba(201, 169, 98, 0.4);
+    transform: translateY(-2px);
+}
+
+.character-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xs);
+}
+
+.character-card .character-russian {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: var(--space-md);
+}
+
+.character-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Themes List */
+.themes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.theme-tag {
+    padding: var(--space-sm) var(--space-md);
+    background: rgba(201, 169, 98, 0.1);
+    border: 1px solid rgba(201, 169, 98, 0.3);
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+}
+
+/* Timeline Minutes */
+.timeline-minute {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: var(--border-subtle);
+}
+
+.timeline-minute:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.minute-time {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    color: var(--color-gold);
+    padding-top: var(--space-xs);
+}
+
+.minute-content h4 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+}
+
+.minute-content p {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Aftermath/Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.info-card {
+    background: var(--color-bg-card);
+    border: var(--border-subtle);
+    padding: var(--space-lg);
+    transition: all var(--transition-base);
+}
+
+.info-card:hover {
+    border-color: rgba(201, 169, 98, 0.4);
+}
+
+.info-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    margin-bottom: var(--space-md);
+    color: var(--color-cream);
+}
+
+.info-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Page Navigation */
+.detail-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-xl);
+    border-top: var(--border-subtle);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.detail-nav a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.detail-nav a:hover {
+    color: var(--color-gold);
+}
+
+/* Video Embed */
+.video-embed {
+    margin: var(--space-xl) 0;
+    aspect-ratio: 16/9;
+    background: var(--color-bg-card);
+    border: var(--border-subtle);
+}
+
+.video-embed iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .detail-hero {
+        min-height: 50vh;
+        padding: calc(var(--space-xl) + 80px) var(--space-md) var(--space-xl);
+    }
+    
+    .detail-content {
+        padding: var(--space-xl) var(--space-md);
+    }
+    
+    .characters-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-minute {
+        grid-template-columns: 1fr;
+    }
+    
+    .minute-time {
+        margin-bottom: var(--space-sm);
+    }
+    
+    .detail-nav {
+        flex-direction: column;
+        gap: var(--space-lg);
+        text-align: center;
+    }
+    
+    .detail-date .day {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-breadcrumb {
+        font-size: 0.625rem;
+    }
+    
+    .detail-quote blockquote {
+        font-size: 1.1rem;
+    }
+    
+    .highlight-box .big-number {
+        font-size: 3rem;
+    }
+}
